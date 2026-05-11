@@ -1,6 +1,6 @@
 # 🚀 Project Showcase
 
-## Simple Calculator - InternPe Task 1
+## InternPe Task 1 - Simple Calculator - 
 
 <div align="left">
   <a href="https://jmchavda2006-glitch.github.io/Web-Development-Internship-Tasks-of-InternPe/Task%201%20Simple%20Calculator/"><img src="https://img.shields.io/badge/LIVE_DEMO-2ecc71?style=pill&logo=google-chrome&logoColor=white" height="45"></a> 
