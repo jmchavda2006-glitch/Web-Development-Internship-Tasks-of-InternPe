@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-gradient"></div>
+    
+    <div class="calculator">
+        <div class="display-well">
+            <input type="text" id="display" readonly placeholder="0">
+        </div>
+
+        <div class="top-actions">
+            <button class="btn-pill copy-btn" onclick="copyToClipboard()">
+                <i class="fas fa-copy"></i> COPY
+            </button>
+            <button class="btn-pill clear-btn" onclick="clearDisplay()">
+                <i class="fas fa-trash"></i> AC
+            </button>
+        </div>
+
+        <div class="grid">
+            <button class="btn-circle btn-red" onclick="deleteLast()">DE</button>
+            <button class="btn-circle btn-green" onclick="appendValue('(')">( )</button>
+            <button class="btn-circle btn-green" onclick="appendValue('%')">%</button>
+            <button class="btn-circle btn-green" onclick="appendValue('/')">/</button>
+
+            <button class="btn-circle" onclick="appendValue('7')">7</button>
+            <button class="btn-circle" onclick="appendValue('8')">8</button>
+            <button class="btn-circle" onclick="appendValue('9')">9</button>
+            <button class="btn-circle btn-green" onclick="appendValue('*')">*</button>
+
+            <button class="btn-circle" onclick="appendValue('4')">4</button>
+            <button class="btn-circle" onclick="appendValue('5')">5</button>
+            <button class="btn-circle" onclick="appendValue('6')">6</button>
+            <button class="btn-circle btn-green" onclick="appendValue('-')">-</button>
+
+            <button class="btn-circle" onclick="appendValue('1')">1</button>
+            <button class="btn-circle" onclick="appendValue('2')">2</button>
+            <button class="btn-circle" onclick="appendValue('3')">3</button>
+            <button class="btn-circle btn-green" onclick="appendValue('+')">+</button>
+
+            <button class="btn-circle btn-green" onclick="negateValue()">+/-</button>
+            <button class="btn-circle" onclick="appendValue('0')">0</button>
+            <button class="btn-circle" onclick="appendValue('.')">.</button>
+            <button class="btn-circle btn-blue" onclick="calculate()">=</button>
+        </div>
+    </div>
+<button class="about-btn" onclick="toggleAbout()">
+    <img src="J.png" alt="J" onerror="this.src='https://img.icons8.com/ios-filled/50/14532d/info.png'">
+</button>
+
+<div id="about-card" class="about-card">
+    <div class="card-content">
+        <span class="close-btn" onclick="toggleAbout()">&times;</span>
+        <h3>Developer Profile</h3>
+        <p>This Calculator Project was developed by <strong>Jigarbhai Maheshbhai Chavda</strong> as an Intern at <strong>InternPe</strong> for the 11th May 2026 Batch of Web Development.</p>
+        <hr>
+        <p>Jigar is currently an undergraduate student in the <strong>Computer Science and Design</strong> branch under the Computer Engineering Department at <strong>G.H. Patel College of Engineering and Technology</strong>, Vallabh Vidyanagar.</p>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
