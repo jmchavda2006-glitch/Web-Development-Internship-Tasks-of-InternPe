@@ -28,6 +28,6 @@ This project is a functional **Simple Calculator** built during my Web Developme
 ---
 
 <div align="center">
-  <b>Developed with ❤️ by Titan Coder 11</b><br>
+  <b>Developed by Jigar Chavda</b><br>
   <i>Don't forget to hit the ⭐ button if you find this helpful!</i>
 </div>
