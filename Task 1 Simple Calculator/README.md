@@ -4,7 +4,6 @@
 
 <div align="left">
   <a href="https://jmchavda2006-glitch.github.io/Web-Development-Internship-Tasks-of-InternPe/Task%201%20Simple%20Calculator/"><img src="https://img.shields.io/badge/LIVE_DEMO-2ecc71?style=pill&logo=google-chrome&logoColor=white" height="45"></a> 
-  <a href="https://www.linkedin.com/in/jigar-chavda-6b8322281/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BfRS48G9gSKSbRe2HlJTH5Q%3D%3D"><img src="https://img.shields.io/badge/LINKEDIN-0077B5?style=pill&logo=linkedin&logoColor=white" height="45"></a>
 </div>
 
 ---
