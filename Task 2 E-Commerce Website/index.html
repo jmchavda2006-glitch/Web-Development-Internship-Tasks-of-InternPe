@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LimeCart | Premium Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="splash-screen" class="splash-screen">
+        <div class="splash-content">
+            <i class="fa-solid fa-leaf splash-logo"></i>
+            <h1 class="splash-title">Lime<span>Cart</span></h1>
+        </div>
+    </div>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo" onclick="goHome(event)">
+                <i class="fa-solid fa-leaf"></i> Lime<span>Cart</span>
+            </a>
+            
+            <div class="search-wrapper">
+                <input type="text" id="search-input" placeholder="Search our premium catalog...">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            </div>
+
+            <div class="nav-actions">
+                <button class="icon-btn cart-toggle-btn" onclick="toggleCart()">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                    <span id="cart-count">0</span>
+                </button>
+                <button class="icon-btn profile-btn" onclick="toggleAbout()">
+                    <i class="fa-solid fa-user-astronaut"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="catalog-view" class="store-container active-view">
+        
+        <div class="hero-banner">
+            <h1>Welcome to LimeCart</h1>
+            <p>Discover our curated collection of Electronics, Home Appliances, Fashion, Accessories, and fresh Groceries.</p>
+        </div>
+
+        <section class="products-view">
+            <div class="view-header">
+                <div>
+                    <h2 id="current-category-title">All Products</h2>
+                    <span id="product-count-meta">Showing 0 products</span>
+                </div>
+                <button class="filter-toggle-btn" onclick="toggleFilterModal()">
+                    <i class="fa-solid fa-sliders"></i> Filter & Sort
+                </button>
+            </div>
+            <div class="products-grid" id="products-container">
+                </div>
+        </section>
+    </main>
+
+    <div id="filter-modal" class="filter-modal">
+        <div class="filter-header">
+            <h3><i class="fa-solid fa-filter"></i> Refine Search</h3>
+            <span class="close-modal" onclick="toggleFilterModal()">&times;</span>
+        </div>
+        
+        <div class="filter-section">
+            <h4>Categories</h4>
+            <div class="filter-group" id="category-filters">
+                <button class="filter-btn active" onclick="filterCategory('all')">All Products</button>
+                <button class="filter-btn" onclick="filterCategory('electronics')">Electronics</button>
+                <button class="filter-btn" onclick="filterCategory('home appliances')">Home Appliances</button>
+                <button class="filter-btn" onclick="filterCategory('fashion')">Fashion</button>
+                <button class="filter-btn" onclick="filterCategory('accessories')">Accessories</button>
+                <button class="filter-btn" onclick="filterCategory('grocery')">Grocery</button>
+            </div>
+        </div>
+
+        <div class="filter-section">
+            <h4>Price Limit</h4>
+            <div class="price-range-container">
+                <input type="range" id="price-range" min="0" max="150000" step="500" value="150000" oninput="updatePriceFilter(this.value)">
+                <div class="price-labels">
+                    <span>₹0</span>
+                    <span id="price-max-label">Max: ₹1,50,000</span>
+                </div>
+            </div>
+        </div>
+        
+        <button class="apply-filter-btn" onclick="toggleFilterModal()">Apply Filters</button>
+    </div>
+    <div id="filter-overlay" class="modal-overlay" onclick="toggleFilterModal()"></div>
+
+    <main id="details-view" class="details-container hidden-view">
+        <button class="back-btn" onclick="goHome(event)">
+            <i class="fa-solid fa-arrow-left-long"></i> Back to Catalog
+        </button>
+        <div class="details-content" id="details-container">
+            </div>
+    </main>
+
+    <div id="cart-drawer" class="cart-drawer">
+        <div class="cart-header">
+            <h3>Shopping Basket (<span id="cart-drawer-count">0</span>)</h3>
+            <span class="close-drawer" onclick="toggleCart()">&times;</span>
+        </div>
+        <div class="cart-items" id="cart-items-container"></div>
+        <div class="cart-footer">
+            <div class="total-row">
+                <span>Subtotal:</span>
+                <span id="cart-total-price">₹0</span>
+            </div>
+            <button class="checkout-btn" onclick="checkoutAlert()">Proceed to Checkout</button>
+        </div>
+    </div>
+    <div id="cart-overlay" class="modal-overlay" onclick="toggleCart()"></div>
+
+    <div id="about-card" class="about-card">
+        <div class="card-content">
+            <span class="close-btn" onclick="toggleAbout()">&times;</span>
+            
+            <div class="profile-img-wrapper">
+                <img src="J.png" alt="Jigarbhai Maheshbhai Chavda" onerror="this.src='https://via.placeholder.com/200?text=J'">
+            </div>
+
+            <h3>Developer Profile</h3>
+            <p>This E-Commerce Project was developed by <strong>Jigarbhai Maheshbhai Chavda</strong> as an Intern at <strong>InternPe</strong> for the 11th May 2026 Batch of Web Development.</p>
+            <hr>
+            <p>Jigar is an undergraduate student in the <strong>Computer Science and Design</strong> branch at <strong>G.H. Patel College of Engineering and Technology</strong>.</p>
+            <hr>
+            <p class="disclaimer-text">
+                <strong>Disclaimer:</strong> This website is built strictly for educational and internship task purposes. All product images are sourced from Amazon and are not used for advertising or commercial gain.
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
